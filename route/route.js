@@ -6,12 +6,25 @@ var use=require('../schema/schema.js');
 
 var route=express.Router();
 var sess;
+
 route.get("/",function(req,res){
-  res.render('login');
+if(req.user)
+{
+  res.redirect('/user');
+}
+else {
+
+    res.render('login');
+}
 });
 
 route.get("/login",function(req,res){
-  res.render("front");
+  if(req.user){
+  res.redirect('/user');
+  }
+  else {
+    res.render('front')
+  }
 });
 
 route.get('/google',passport.authenticate('google',{scope:['profile']}))
@@ -40,7 +53,7 @@ console.log(error);
 }
 else {
   new use(
-  {"name":req.body.name,"email":req.body.email,"pass":req.body.pass,date:{"dd":req.body.dd,"mm":req.body.mm,"YY":req.body.yy}}
+  {"name":req.body.name,"email":req.body.email,"pass":req.body.pass,date:{"dd":req.body.dd,"mm":req.body.mm,"YY":req.body.yy},img:'',Eid:Math.floor(Math.random()*100000000)}
   ).save().then(function(user)
   {
     console.log(user);

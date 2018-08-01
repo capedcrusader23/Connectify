@@ -24,6 +24,9 @@ date:{
   yy:{
     type:Number
   }
+},
+img:{
+type:String
 }
 });
 user.methods.vaild=function(){

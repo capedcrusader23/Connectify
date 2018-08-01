@@ -10,7 +10,10 @@ var pro=require('./route/profile.js');
 const session = require('express-session');
 var check=require('express-validator');
 var pp2=require('./config/local.js');
+var mul=require('multer');
+var path=require('path')
 app.use(express.static('views'))
+
 
 app.use(cookie({
   maxAge:24*60*60*1000,
