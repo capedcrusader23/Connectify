@@ -32,6 +32,7 @@ route.get('/google',passport.authenticate('google',{scope:['profile']}))
 route.get('/google/redirect',passport.authenticate('google'),function(req,res){
   res.redirect('/user');
 });
+
 route.get('/lgn',passport.authenticate('local',{failureRedirect:'/login',successRedirect:'/user'})
 );
 

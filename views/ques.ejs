@@ -31,7 +31,15 @@
 <div>
 <p>Ask a question <%= user.name %></p>
 <form method="POST" action="/postques">
-<input type="text"  name="question">
+<input type="text"  name="question"></input>
+Choose a category
+<ul>
+<li><input type="checkbox" name="Education">Education</input></li>
+<li><input type="checkbox" name="Sports">Sports</input></li>
+<li><input type="checkbox" name="Science">Science</input></li>
+<li><input type="checkbox" name="Politics">Politics</input></li>
+<li><input type="checkbox" name="Humor">Humor</input></li>
+</ul>
 <button type="submit" class="btn btn-primary">Share</button>
 </form>
 </div>

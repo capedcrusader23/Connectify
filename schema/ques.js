@@ -19,6 +19,9 @@ per:{
 },
 name:{
   type:String
+},
+time:{
+  type:String
 }
 });
 var ques=new schema({
@@ -42,7 +45,14 @@ askedby:{
 },
 anser:{
   type:[ans]
+},
+category:{
+type:[String]
+},
+time:{
+  type:Date
 }
+
 });
 
 

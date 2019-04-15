@@ -14,7 +14,8 @@ Eid:{
 pass:{
   type:String
 },
-date:{
+date:
+    {
   dd:{
     type:Number
   },
@@ -25,9 +26,28 @@ date:{
     type:Number
   }
 },
-img:{
-type:String
-}
+school:{
+  type:String
+},
+college:{
+  type:String
+},
+currently:{
+  type:String
+},
+    country:{
+  type:String
+    },
+    mobile:{
+  type:String
+    },
+    lastl:{
+  type:Date,
+        default:Date.now()
+    },
+    pic:{
+    type:String
+    }
 });
 user.methods.vaild=function(){
   return this.pass
